@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Meditation Tracker v9</title>
+  <title>Enhanced Meditation Mandal Tracker</title>
   <style>
     :root {
       --primary-color: #4a90e2;
@@ -15,6 +15,11 @@
       --text-color: #333;
       --card-bg: #fff;
       --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      --light-color:#ffffff;
+    
+         
+            --accent-color: #ff6b6b;
+            --card-bg: rgba(255, 255, 255, 0.1);
     }
 
     body {
@@ -227,18 +232,43 @@
       text-align: center;
       margin: 20px 0;
     }
-
+.logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            position: relative;
+        }
     .timer-controls {
       display: flex;
       justify-content: center;
       gap: 10px;
     }
+    .logo {
+    position: relative;
+}
+.logo::after {
+    content: "Mandal Tracker";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    filter: blur(20px);
+    opacity: 0.7;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Enhanced Meditation Tracker v9</h1>
+    <h1>Enhanced Meditation <span class="logo">Mandal Tracker</span>  </h1>
     <h2>Namaskaram, <span id="userName" contenteditable="true">Your Name</span>!</h2>
     <button id="themeToggle">Toggle Dark Mode</button>
     <button id="giveFeedback">Give Feedback</button>
